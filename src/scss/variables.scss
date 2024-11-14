@@ -1,0 +1,83 @@
+@import './mixins.scss';
+
+// Fonts -------------------
+$font-main: 'Open sans', sans-serif;
+$font-secondary: 'Oswald', sans-serif;
+
+// Breakpoints -------------------
+$break-m: 900px;
+
+// Global sizes -------------------
+$appBarWidth: 350px;
+$contentWidth: 1180px;
+$responsivePropertyLockMin: 450px;
+
+@mixin renderCssVariables() {
+	// Easings -------------------
+	:root {
+		--ease-in-out-sine: cubic-bezier(0.37, 0, 0.63, 1);
+		--ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+		--ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+		--ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+		--ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+		--ease-in-out-black: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+		--ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+		--ease-in-sine: cubic-bezier(0.12, 0, 0.39, 0);
+		--ease-in-cubic: cubic-bezier(0.32, 0, 0.67, 0);
+		--ease-in-quint: cubic-bezier(0.64, 0, 0.78, 0);
+		--ease-in-circ: cubic-bezier(0.55, 0, 1, 0.45);
+		--ease-in-expo: cubic-bezier(0.7, 0, 0.84, 0);
+		--ease-in-black: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+		--ease-in-back: cubic-bezier(0.36, 0, 0.66, -0.56);
+
+		--ease-out-sine: cubic-bezier(0.61, 1, 0.88, 1);
+		--ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+		--ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+		--ease-out-circ: cubic-bezier(0, 0.55, 0.45, 1);
+		--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+		--ease-out-black: cubic-bezier(0.32, 1.55, 0.68, 0.45);
+		--ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1.56);
+
+		// Gaps -------------------
+		--gap-s: 15px;
+		--gap-m: 20px;
+		--gap-l: 50px;
+
+		@include breakpoint(768px) {
+			--gap-s: 10px;
+			--gap-m: 20px;
+			--gap-l: 30px;
+		}
+	}
+
+	// Colors -------------------
+	:root {
+		--main: #0061a1;
+		--main-300: #016fb8;
+		--main-200: #71a9d6;
+		--red: #e4002b;
+		--green: #237332;
+		--yellow: #f5d200;
+		--text-grey: #c6baba;
+		--orange: #e9971d;
+		--orange-300: #efbd71;
+
+		--white: #fff;
+		--black: #000;
+		--grey: #eaeaea;
+		--grey-500: #afafaf;
+		--grey-warm: #c6baba;
+		--background-grey: #f6f6f6;
+
+		--error: #de5d5d;
+		--error-300: #ead3d3;
+
+		--success: #61ca80;
+	}
+
+	.darkmode {
+		--black: var(--white);
+		--white: var(--black);
+	}
+}

@@ -12,7 +12,7 @@
 				const blob = new Blob([textFileContent], { type: 'text/plain' });
 				const link = document.createElement('a');
 				link.href = URL.createObjectURL(blob);
-				link.download = 'data.txt';
+				link.download = 'data.json';
 				document.body.appendChild(link);
 				link.click();
 				document.body.removeChild(link);

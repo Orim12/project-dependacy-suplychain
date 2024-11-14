@@ -1,0 +1,29 @@
+$padding: 50px;
+$mobile-padding: 20px;
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	&.disabled {
+		.cover {
+			max-width: 100%;
+			padding-inline: 0;
+
+			@include breakpoint(768px) {
+				padding-inline: 0;
+			}
+		}
+	}
+
+	.cover {
+		width: 100%;
+		max-width: calc(1440px + ($padding * 2));
+		padding-inline: 60px;
+		box-sizing: border-box;
+		@include breakpoint(768px) {
+			padding-inline: $mobile-padding;
+		}
+	}
+}
